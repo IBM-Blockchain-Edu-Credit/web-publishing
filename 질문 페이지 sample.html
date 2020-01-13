@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>jQuery</title>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <style>
+      div, body{
+        font-family : 'Noto Sans KR', sans-serif;
+      }
+      p.a {
+        cursor: pointer;
+        font-weight: bold;
+      }
+      div.div1, div.div2, div.div3, div.div4, div.div5 {
+        font-size : 20px;
+        padding-bottom : 3px;
+      }
+      .container {
+        padding-right : 15px;
+        padding-left : 15px;
+        margin-right : auto;
+        margin-left: auto;
+      }
+      menu{
+        font-size : 25px;
+        text-align: center;
+        font-weight : bold;
+      }
+      textarea{
+        vertical-align : text-top;
+        height : 50px;
+      }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <script>
+      $(document).ready( function() {
+        $( 'div.div1' ).click( function() {
+          $( 'div.answer1' ).toggle( 'slow' );
+        });
+      });
+      $(document).ready( function() {
+        $( 'div.div2' ).click( function() {
+          $( 'div.answer2' ).toggle( 'slow' );
+        });
+      });
+      $(document).ready( function() {
+        $( 'div.div3' ).click( function() {
+          $( 'div.answer3' ).toggle( 'slow' );
+        });
+      });
+      $(document).ready( function() {
+        $( 'div.div4' ).click( function() {
+          $( 'div.answer4' ).toggle( 'slow' );
+        });
+      });
+      $(document).ready( function() {
+        $( 'div.div5' ).click( function() {
+          $( 'div.answer5' ).toggle( 'slow' );
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="container body-content">
+      <menu>
+        아래에 질문들에 너의 생각을 담아 작성해줘!
+      </menu><br>
+      <div class="col-lg-50 col-md-50 card">
+          <div class="div1">1. 오늘의 OPP 제목과 해쉬태그는?</div>
+            <div class="answer1">
+              <textarea class="b1" cols="150" placeholder="&nbsp내용을 입력하세요. " name="content"></textarea><br>
+            </div>
+          <div class="div2">2. 오늘의 학습을 통해 어떤 것을 배웠어?</div>
+            <div class="answer2">
+              <textarea class="b2" cols="150" placeholder="&nbsp내용을 입력하세요. " name="content"></textarea><br>
+            </div>
+          <div class="div3">3. 오늘의 학습 내용 중 가장 좋았던 부분은? </div>
+            <div class="answer3">
+              <textarea class="b3" cols="150" placeholder="&nbsp내용을 입력하세요. " name="content"></textarea><br>
+            </div>
+          <div class="div4">4. 오늘의 배운 내용 중 가장 어려웠던 부분은?</div>
+            <div class="answer4">
+              <textarea class="b4" cols="150" placeholder="&nbsp내용을 입력하세요. " name="content"></textarea><br>
+            </div>
+          <div class="div5">5. 오늘의 배운 내용을 자유롭게 표현해본다면?</div>
+            <div class="answer5">
+              <textarea class="b5" cols="150" placeholder="&nbsp내용을 입력하세요. " name="content"></textarea><br>
+            </div>
+      </div>
+    </div>
+  </body>
+</html>
