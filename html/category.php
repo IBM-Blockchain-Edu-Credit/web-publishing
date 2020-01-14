@@ -15,7 +15,6 @@
 <?php
   //require $_SERVER["DOCUMENT_ROOT"].'/scripts/dbconnect.php';
   //$connect = DBConnect();
-  $connect = mysqli_connect('localhost','root', '1234', 'db');
   $connect->query('set character set euckr;');
   $connect->query("set session character_set_connection=utf8;");
   $connect->query("set session character_set_results=utf8;");
