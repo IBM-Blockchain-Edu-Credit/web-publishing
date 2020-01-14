@@ -1,7 +1,7 @@
 <?php
 function DBConnect()
 {
-    $connect = new mysqli('호스트명','아이디', '비번', 'db', '포트');
+  $connect = new mysqli('호스트명','아이디', '비번', 'db', '포트');
     if($connect->connect_errno){
         echo '[연결실패] : '.$connect->connect_error;
         exit;

@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap');
+div, body{
+  font-family: 'Noto Sans KR', sans-serif;
+}
+p.a {
+  cursor: pointer;
+  font-weight: bold;
+}
+div.div1, div.div2, div.div3, div.div4, div.div5 {
+  font-size : 20px;
+  padding-bottom : 3px;
+}
+div.container {
+  margin : 0 auto;
+  width : 900px;
+  background-color: white;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+menu{
+  font-size : 25px;
+  text-align: center;
+  font-weight : bold;
+}
+div.answer2, div.answer3, div.answer4, div.answer5{
+  display: none;
+}
+.button-4{
+  width:100px;
+  height:40px;
+  float:left;
+  background-color:#EDA900;
+  text-align:center;
+  cursor:pointer;
+  position:relative;
+  box-sizing:border-box;
+  overflow:hidden;
+  margin:0 0 40px 50px;
+  float:right;
+  vertical-align: middle;
+}
+.button-4 a{
+  font-size:16px;
+  color:#34495e;
+  text-decoration:none;
+  line-height:37px;
+  transition:all .5s ease;
+  z-index:2;
+  position:relative;
+}
+.eff-4{
+  width:100px;
+    height:40px;
+    left:-100px;
+    background:#34495e;
+    position:absolute;
+    transition:all .5s ease;
+    z-index:1;
+    top:-5px;
+    float:right;
+  }
+  .button-4:hover .eff-4{
+    left:0;
+  }
+  .button-4:hover a{
+    color:#fff;
+  }
+  .button-1{
+    width:100px;
+    height:40px;
+    float:left;
+    background-color:#EDA900;
+    text-align:center;
+    cursor:pointer;
+    position:relative;
+    box-sizing:border-box;
+    overflow:hidden;
+    margin:0 0 40px 0;
+    float:left;
+  }
+  .button-1 a{
+    font-size:16px;
+    color:#34495e;
+    text-decoration:none;
+    line-height:37px;
+    transition:all .5s ease;
+    z-index:2;
+    position:relative;
+  }
+  .eff-1{
+    width:100px;
+    height:40px;
+  top:-5px;
+  right:-100px;
+  background:#34495e;
+  position:absolute;
+  transition:all .5s ease;
+  z-index:1;
+}
+.button-1:hover .eff-1{
+  right:0;
+}
+.button-1:hover a{
+  color:#fff;
+}
+textarea {
+   min-height: 50px;
+   resize : none;
+   width: 700px;
+ }
+ div.title{
+   margin : 0 auto;
+   width : 900px;
+   padding-left: 25px;
+   height : 40px;
+ }
+ b{
+   font-size : 18px;
+ }
