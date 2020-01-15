@@ -114,6 +114,7 @@ textarea {
    padding-left: 25px;
    height : 40px;
  }
- b{
+ div.script{
    font-size : 18px;
+   text-align: center;
  }

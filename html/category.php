@@ -12,15 +12,6 @@
   <link href="css/fonts.css" rel="stylesheet" />
   <link href="css/card.css" rel="stylesheet" />
 </head>
-<?php
-  //require $_SERVER["DOCUMENT_ROOT"].'/scripts/dbconnect.php';
-  //$connect = DBConnect();
-  $connect = mysqli_connect('localhost','root', '1234', 'db');
-  $connect->query('set character set euckr;');
-  $connect->query("set session character_set_connection=utf8;");
-  $connect->query("set session character_set_results=utf8;");
-  $connect->query("set session character_set_client=utf8;");
-?>
 <body style="background-color:#FFBB00">
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
@@ -28,7 +19,22 @@
     <div class="title">
          <h1 style="font-size:50px;text-align:left;color:white;font-weight:bold;">WRITING OPP :P</h1>
     </div>
-
+    <script>
+    jQuery(function($) {
+   $("div.title").css("display", "none");
+   $("menu").css("display", "none");
+   $("div.title").fadeIn(1000);
+   $("menu").fadeIn(1000);
+   $("a.transition").click(function(event){
+   event.preventDefault();
+   linkLocation = this.href;
+   $("body").fadeOut(700, redirectPage);
+   });
+   function redirectPage() {
+   window.location = linkLocation;
+   }
+ });
+    </script>
    <div class="container">
         <menu>
           아래는 네가 한 것들!

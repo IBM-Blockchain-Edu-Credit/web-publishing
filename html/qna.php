@@ -41,7 +41,44 @@
     <div class="title">
          <h1 style="font-size:50px;text-align:left;color:white;font-weight:bold;">WRITING OPP :P</h1>
     </div>
+    <script type="text/javascript">
+      (function () {
+      var autoSave = new Object();
+      (function (obj) {
+        obj.configuration = {
+          interval: 60 // second(s)
+        };
+        obj.bindTimer = function() {
+          var textEle = document.querySelector('#test');
+          var textVal = textEle.value;
+          var ref1, ref2, ref3; // Newer -&gt; Older
 
+          // Save to localStorage
+          var encodedTextVal = btoa(textVal);
+          ref1 = window.localStorage.getItem('textval-01');
+          ref2 = window.localStorage.getItem('textval-02');
+
+          if ((window.localStorage) && (encodedTextVal != ref1)){
+            window.localStorage.setItem('textval-01', encodedTextVal);
+            window.localStorage.setItem('textval-02', ref1);
+            window.localStorage.setItem('textval-03', ref2);
+          }
+          else if (!window.localStorage) {
+            console.log('Error' + ': Your browser not support')
+            return false;
+          }
+        };
+
+        obj.start = function() {
+          obj.bindTimer();
+          setTimeout(function() {
+            obj.start();
+          }, obj.configuration.interval * 1000);
+        };
+        obj.start();
+      })(autoSave);
+      })();
+    </script>
    <div class="container">
         <menu>
           아래에 질문들에 너의 생각을 담아 작성해줘!
@@ -62,12 +99,36 @@
     </div>
      <div class="button-4">
        <div class="eff-4"></div>
-       <a href="#"> 다음 </a>
+       <a href="result.php"> 다음 </a>
      </div>
    </div>
    <script>
    $("textarea").on('keydown keyup', function () {
      $(this).height(1).height( $(this).prop('scrollHeight')+12 );
+   });
+      jQuery(function($) {
+     $("div.title").css("display", "none");
+     $("menu").css("display", "none");
+     $("div.div1").css("display", "none");
+     $("div.div2").css("display", "none");
+     $("div.div3").css("display", "none");
+     $("div.div4").css("display", "none");
+     $("div.div5").css("display", "none");
+     $("div.title").fadeIn(1000);
+     $("menu").fadeIn(1000);
+     $("div.div1").fadeIn(1000);
+     $("div.div2").fadeIn(1000);
+     $("div.div3").fadeIn(1000);
+     $("div.div4").fadeIn(1000);
+     $("div.div5").fadeIn(1000);
+     $("a.transition").click(function(event){
+     event.preventDefault();
+     linkLocation = this.href;
+     $("body").fadeOut(700, redirectPage);
+     });
+     function redirectPage() {
+     window.location = linkLocation;
+     }
    });
  </script>
 

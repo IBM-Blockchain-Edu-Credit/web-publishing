@@ -3,7 +3,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>OPP MAIN PAGE</title>
+    <title>MY OPP PAGE</title>
 
     <script src="lib/jquery/jquery-3.3.1.min.js"></script>
     <script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
@@ -19,17 +19,14 @@
            <h1 style="font-size:50px;text-align:left;color:white;font-weight:bold;">HI OPP :P</h1>
       </div>
      <div class="container">
-          <br><br><menu>
-           오늘 학습한 부분과 너의 생각을 정리해볼까?
-         </menu><br><br>
-
        <div>
-        <div class="script">다음 기록지에 너의 생각을 담아 작성해줘!</div>
-       <div class="button-4">
-         <div class="eff-4"></div>
-         <a href="category.php"> 다음 </a>
-       </div>
+    <br><br><menu>네가 한 내용들</menu>
+        <menu style="font-size:18px;weight:normal;">: 적은 내용들을 다시 한 번 살펴봐!</menu>
      </div>
+     <div class="button-1">
+    <div class="eff-1"></div>
+    <a href="qna.php"> 되돌아가기 </a>
+    </div>
      <script>
        jQuery(function($) {
          $("div.title").css("display", "none");
