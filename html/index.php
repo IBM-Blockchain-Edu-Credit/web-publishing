@@ -1,50 +1,63 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>OPP MAIN PAGE</title>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>로그인</title>
 
-    <script src="lib/jquery/jquery-3.3.1.min.js"></script>
-    <script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
-    <link href="lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
-    <link href="css/fonts.css" rel="stylesheet" />
-    <link href="css/card.css" rel="stylesheet" />
-  </head>
-  <body style="background-color:#FFBB00">
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-      <br>
-      <div class="title">
-           <h1 style="font-size:50px;text-align:left;color:white;font-weight:bold;">HI OPP :P</h1>
-      </div>
-     <div class="container">
-          <br><br><menu>
-           오늘 학습한 부분과 너의 생각을 정리해볼까?
-         </menu><br><br>
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
 
-       <div>
-        <div class="script">다음 기록지에 너의 생각을 담아 작성해줘!</div>
-       <div class="button-4">
-         <div class="eff-4"></div>
-         <a href="category.php"> 다음 </a>
-       </div>
-     </div>
-     <script>
-       jQuery(function($) {
-         $("div.title").css("display", "none");
-         $("menu").css("display", "none");
-         $('div.title').fadeIn(1000)
-         $('menu').fadeIn(1000)
-         $("a.transition").click(function(event){
-         event.preventDefault();
-         linkLocation = this.href;
-         $("body").fadeOut(700, redirectPage);
-         });
-         function redirectPage() {
-         window.location = linkLocation;
-         }
-       });
-     </script>
-  </body>
+    <!-- Main css -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="main">
+        <section class="sign-in">
+            <div class="container">
+                <div class="signin-content">
+                    <div class="signin-image">
+                        <figure><img src="images/signin-image.jpg" alt="sing up image"></figure>
+                        <a href="signup.php" class="signup-image-link">회원가입</a>
+                    </div>
+
+                    <div class="signin-form">
+                        <h2 class="form-title">로그인</h2>
+                        <form method="POST" action="login_check.php" class="register-form" id="login-form">
+                            <div class="form-group">
+                                <label for="your_name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                                <input type="text" name="your_name" id="your_name" placeholder="아이디"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="your_pass"><i class="zmdi zmdi-lock"></i></label>
+                                <input type="password" name="your_pass" id="your_pass" placeholder="비밀번호"/>
+                            </div>
+                            <div class="form-group">
+                                <input type="checkbox" name="remember-me" id="remember-me" class="agree-term" />
+                                <label for="remember-me" class="label-agree-term"><span><span></span></span>자동 로그인</label>
+                            </div>
+                            <div class="form-group form-button">
+                                <input type="submit" name="signin" id="signin" class="form-submit" value="로그인"/>
+                            </div>
+                        </form>
+                        <div class="social-login">
+                            <span class="social-label">Or login with</span>
+                            <ul class="socials">
+                                <li><a href="#"><i class="display-flex-center zmdi zmdi-facebook"></i></a></li>
+                                <li><a href="#"><i class="display-flex-center zmdi zmdi-twitter"></i></a></li>
+                                <li><a href="#"><i class="display-flex-center zmdi zmdi-google"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- JS -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
 </html>

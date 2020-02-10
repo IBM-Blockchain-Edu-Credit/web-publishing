@@ -13,8 +13,7 @@
   <link href="css/card.css" rel="stylesheet" />
 </head>
 <?php
-  //require $_SERVER["DOCUMENT_ROOT"].'/scripts/dbconnect.php';
-  //$connect = DBConnect();
+  require $_SERVER["DOCUMENT_ROOT"].'/scripts/dbconnect.php';
   $connect->query('set character set euckr;');
   $connect->query("set session character_set_connection=utf8;");
   $connect->query("set session character_set_results=utf8;");
